@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">  
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <meta name="Generator" content="EditPlus®">  
+    <meta name="Author" content="">  
+    <meta name="Keywords" content="">  
+    <meta name="Description" content="">  
+	<title>自我评价</title>
+    <link rel="stylesheet" href="assets/animate/set.css" />
+    <link rel="stylesheet" href="assets/gallery/blueimp-gallery.min.css">  
+    <link rel="stylesheet" href="css/bootstrap.min.css">   
+    <link rel="stylesheet" href="css/colors/color.css"> 
+    <link rel="stylesheet" href="css/style.css">
+	<link href="" rel="stylesheet" />  
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>  
+    <style type="text/css">  
+        .ctxt{  
+            background:#669;  
+            width:1000px;  
+            height:400px;  
+            overflow:hidden;  
+            margin:0 auto;  
+        }  
+        .ctxt p{  
+            position:relative;  
+            left:1000px;  
+            margin:0;  
+            padding:0;  
+        }  
+    </style>  
+
+	
+</head>
+<body>
+
+ 
+<div class="preloaders">
+  <div class="preloaders-gif"></div>
+</div>
+<header id="home">
+<div class="background-overlay">
+	
+	<div class="container-header">
+		<div class="navbar navbar-inverse bs-docs-nav navbar-fixed-top sticky-navigation bgc-two">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#onepage-navigation">
+					<span class="sr-only">导航</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Y、xue</a>
+					
+				</div>
+				<div class="navbar-collapse collapse" id="onepage-navigation">
+					<ul class="nav navbar-nav navbar-right main-navigation">
+					   <li><a href="index.html">主页</a></li>
+						<li><a href="jianjie.html">简介</a></li>
+						<li><a href="aihao.html">爱好</a></li>
+						<li><a href="picture.html">相册</a></li>
+						<li><a href="guanyu.html">关于</a></li>
+						<li><a href="liuyan.html">留言</a></li>
+						<li><a href="connect.html">联系方式</a></li>
+								
+					</ul>
+				</div>
+			</div>
+	   </div>
+</div>
+<div class="container">
+		
+		<div class="row">
+			
+			<div class="col-md-10 col-md-offset-1 distance-header">
+				
+				<h1>
+                    <strong>个人评价</strong>
+				</h1>
+				<div class="underline"></div><br><br><br><br><br><br><br><br>
+				<div id="call_to_action-5" class="distance-button">
+				</div>
+			</div>
+	   </div>	
+</div>
+
+<section class="section-about bgc-one">
+<div class="container">
+    
+    <div class="row">
+		<div class="col-md-6">
+			<div class="side-images pull-left">
+				<img src="images/11.jpg" alt="Feature" class="img-responsive"></br>
+			</div>
+		</div>
+		<div class="col-md-6">
+		<br><br><br><br><br>
+		</div>
+		<p>其实我自己也不太清楚怎么评价自己，总体上是个阳光向上的好青年。性格上有些容易情绪化,有的时候爱钻牛角尖。喜欢我行我素独来独往，不太爱与生人交往。对自己感兴趣的东西很积极。心直口快因此容易得罪人。情绪时冷时热飘忽不定其他的都还好。我个人觉得自己挺有主见，有自己的想法。看问题的角度总是和别人不太一样。
+		</p>
+		<br><br><br>
+		</div>
+	</div>	
+</div>
+	
+</div> 
+<br><br><br><br>
+
+    <script src="assets/jquery.js"></script>
+    <script src="assets/gallery/jquery.blueimp-gallery.min.js"></script>    
+    <script src="js/jquery.nav.js"></script>
+    <script src="js/custom.js"></script>
+	<script type="text/javascript">  
+    $(document).ready(function(){  
+  
+    $("#submitBut").click(function(){  
+        var msgtxt=$("#msg").val();  
+        var colortxt = getReandomColor();  
+        var topPos = generateMixed(3);  
+        if (topPos > 300)  
+        {  
+            topPos = 30;  
+        }  
+        var newtxt = '<p style="top:'+topPos+'px; color:'+colortxt+'">'+$("#msg").val()+'</p>';  
+        $(".ctxt").prepend(newtxt);  
+        var addTextW = $(".ctxt").find("p").width();  
+        $(".ctxt p").animate({left: '-'+addTextW+"px"}, 30000,function(){  
+            $(this).hide();  
+        });  
+    });  
+  
+});  
+ 
+    function getReandomColor(){  
+        return '#'+(function(h){  
+        return new Array(7-h.length).join("0")+h  
+        })((Math.random()*0x1000000<<0).toString(16))  
+    }  
+      
+    var jschars = ['0','1','2','3','4','5','6','7','8','9'];    
+    function generateMixed(n) {    
+        var res = "";    
+        for(var i = 0; i < n ; i ++) {    
+            var id = Math.ceil(Math.random()*9);    
+            res += jschars[id];    
+        }    
+        return res;    
+    }   
+</script>  
+
+	
+</body>
+</html>
